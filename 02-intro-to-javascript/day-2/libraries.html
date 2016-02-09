@@ -3,12 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+
+  <!-- order matters here, make sure to load the jquery lib first -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script type="text/javascript" src="library.js"></script>
   <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
+  <!-- 
+    position: relative is necessary when change positioning with
+      animations
+   -->
   <a href="#" id="this-one" style="position: relative; left: 0;">Orlando</a>
   <a href="#">Trish</a>
+
+  <!-- display: none is necessary when using show() -->
+  <a href="#" id="animator" style="display: none;">Animate Me</a>
+
+  <h1 style="position: relative">Click Me</h1>
+  <h1>This is the second h1</h1>
 </body>
 </html>
