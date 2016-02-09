@@ -1,0 +1,13 @@
+.float-left {
+  float: left;
+  background-color: magenta;
+}
+
+.float-right {
+  float: right;
+  background-color: blue; 
+}
+
+p {
+  clear: right;
+}
