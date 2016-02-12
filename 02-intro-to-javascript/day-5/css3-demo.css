@@ -1,0 +1,59 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+h1 {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+h1.bear::after {
+  color: red;
+  content: " Sí";
+}
+
+strong {
+  font-size: 200px;
+  display: inline-block;
+  position: absolute;
+  top: 25%;
+  left: 175px;
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+
+  transition: all 1s;
+}
+
+strong.hidden {
+  opacity: 0;
+}
+
+a {
+  display: inline-block;
+  height: 440px;
+  width: 440px;
+  background-repeat: no-repeat;
+  background-image: url("http://wearenytech.com/uploads/humans/14-orlandoc.jpg");
+  background-size: 100% auto;
+  border-radius: 50%;
+  border: 4px solid black;
+  box-shadow: 0 0 5px black;
+
+  transition:
+    transform 1s,
+    background-image 1.5s,
+    width 0.5s linear 0.5s, 
+    height 1s linear 1s;
+}
+
+.transition {
+  background-image: url("http://i0.wp.com/cdn.bgr.com/2015/10/bear.jpg");
+  width: 625px;
+  height: 468px;
+  transform: rotate(360deg) translate(50%,0);
+}
