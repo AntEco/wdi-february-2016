@@ -8,6 +8,11 @@ h1 {
   text-align: center;
 }
 
+/* 
+  whenever we switch to this class
+  it will add " Sí" text to the end of 
+  the h1
+ */
 h1.bear::after {
   color: red;
   content: " Sí";
@@ -20,12 +25,21 @@ strong {
   top: 25%;
   left: 175px;
   color: white;
+
+  /* 
+    this is a little bit of a hack to 
+    add a stroke the ? in front of my picture
+  */
   text-shadow:
    -1px -1px 0 #000,  
     1px -1px 0 #000,
     -1px 1px 0 #000,
      1px 1px 0 #000;
 
+  /* 
+    this will transition all elements being changed
+    in 1 second (at the same time)
+   */
   transition: all 1s;
 }
 
@@ -44,6 +58,10 @@ a {
   border: 4px solid black;
   box-shadow: 0 0 5px black;
 
+  /* 
+    this will transition only specific elements
+    with specific timings and delays
+   */
   transition:
     transform 1s,
     background-image 1.5s,
@@ -55,5 +73,10 @@ a {
   background-image: url("http://i0.wp.com/cdn.bgr.com/2015/10/bear.jpg");
   width: 625px;
   height: 468px;
+
+  /* 
+    these transforms will rotate the image a bit
+    and position itself centered in the page
+  */
   transform: rotate(360deg) translate(50%,0);
 }
