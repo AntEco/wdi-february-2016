@@ -30,6 +30,8 @@ class Suv < Vehicle
 end
 
 # this creates a new sedan object with 4 wheels
+#   because we are inheriting from vehicle inherit
+#   the initialize method as well
 sedan = Sedan.new(4)
 
 # because we made wheels as an attr_writer
