@@ -1,0 +1,11 @@
+<!-- this should display on the /dogs page -->
+<!-- this creates an ordered list container -->
+<ol>
+  <!--
+    this loops thru the array of dogs
+    and displays each dog within an li
+  -->
+  <% @dogs.each do |dog| %>
+    <li><%= dog.name %></li>
+  <% end %>
+</ol>

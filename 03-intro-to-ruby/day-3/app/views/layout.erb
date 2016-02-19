@@ -1,0 +1,27 @@
+<!-- 
+  this is the layout file for the entire site
+  anything that is in this file will appear in every page
+  on this site
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <!-- this nav will appear on every page  -->
+   <nav>
+    <a href="/">Home</a>
+    <a href="/dogs">Dogs</a>
+    <a href="/cats">Cats</a>
+  </nav>
+
+  <!--
+    this is where all sub-template (index.erb/dogs.erb/cats.erb)
+    html code will output
+  -->
+  <%= yield %>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!-- this should display on the / page -->
+<!-- this creates an unordered list container -->
+<ul id="list">
+  <!--
+    this loops thru an array
+    and displays each item within an li
+  -->
+  <% array = [1, "orlando",3,4] %>
+  <% array.each do |element|  %>
+    <li><%= element %></li>
+  <% end %>
+</ul>
