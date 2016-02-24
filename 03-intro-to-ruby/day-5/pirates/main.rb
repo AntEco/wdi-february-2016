@@ -56,7 +56,7 @@ post "/contact-us" do
   # checks to see if the email was sent
   #   200 means it was sent/ not 200 means it was not sent
   if response.code == 200
-    "Thank you. Your email has been sent."
+    erb :thank_you
   else
     "There has been an error sending your email. Please try again"
   end
