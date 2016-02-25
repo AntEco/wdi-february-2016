@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/users">Users</a>
+      
+    <% if session[:user_id] %> 
+      <a href="/signout">Signout</a>
+    <% else %>
+      <a href="/signup">Signup</a>
+      <a href="/login">Login</a>
+    <% end%>
+  </nav>
+
+  <% if flash[:notice] %>
+    <div class="flash notice">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+
+  <% if flash[:alert] %>
+    <div class="flash alert">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+
+  <%= yield %>
+</body>
+</html>

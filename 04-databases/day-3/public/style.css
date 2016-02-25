@@ -1,0 +1,44 @@
+body {
+  font: 12px sans-serif;
+}
+
+nav {
+  padding-bottom: 10px;
+}
+
+.flash {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.notice {
+  border: 1px solid green;
+  background-color: #ccff99;
+}
+
+.alert {
+  border: 1px solid red;
+  background-color: #ff6666;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+strong {
+  display: inline-block;
+  margin-right: 5px;
+  width: 70px;
+}
