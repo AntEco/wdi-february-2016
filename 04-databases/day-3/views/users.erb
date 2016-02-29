@@ -3,7 +3,8 @@
     <li>
       <strong>Id:</strong><%= user.id %><br />
       <strong>Email:</strong><%= user.email %><br />
-      <strong>Password:</strong><%= user.password %>
+      <strong>Password:</strong><%= user.password %><br />
+      <strong>Profile:</strong><a href="/users/<%= user.id %>"><%= user.email %></a>
     </li>
   <% end %>
 </ul>
