@@ -1,0 +1,8 @@
+<ul>
+<% @posts.each do |post| %>
+  <li>
+    <strong>Body:</strong><%= post.body %><br />
+    <strong>Created At:</strong><%= post.created_at.getlocal.strftime("%B %d, %Y %I:%M:%S %p") %>
+  </li>
+<% end %>
+</ul>
