@@ -8,21 +8,31 @@ class UsersController < ApplicationController
   end
 
   def new
-  end
-
-  def create
+    @user = User.new
   end
 
   def edit
+    @user = User.find(params[:id])
+  end
+
+  # these respond to the actions listed above
+  def create
+    User.create(params[:user])
+
+    redirect_to users_path
   end
 
   def update
+    @user = User.find(params[:id])
+    @user.update(params[:user])
+
+    redirect_to users_path
   end
 
   def destroy
     @user = User.find(params[:id])
     @user.destroy
 
-    redirect_to users_path
+    redirect_to :back
   end
 end

@@ -7,7 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
+  <nav>
+    <%= link_to "Index", users_path %>
+    <%= link_to "New", new_user_path %>
+  </nav>
+
 <%= yield %>
 
 </body>

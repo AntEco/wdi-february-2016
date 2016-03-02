@@ -3,6 +3,6 @@ this is the show user template
 <p>
   <strong>Full Name: </strong><%= @user.full_name %><br />
   <strong>Email: </strong><%= @user.email %><br />
-  <strong>Password: </strong><%= @user.password %>
+  <strong>Password: </strong><%= @user.password %><br />
   <%= link_to "Delete User", user_path(@user.id), method: :delete %>
 </p>
