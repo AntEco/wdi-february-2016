@@ -33,8 +33,15 @@ get "/login" do
   erb :login
 end
 
-get "/users/:id" do
+get "/profile" do
+  @user = current_user
+  erb :profile
+end
+
+get "/profile/:id" do
   "Id: " + params[:id]
+  @user = User.find(params[:id])
+  erb :profile
 end
 
 post "/login" do
@@ -54,4 +61,18 @@ get "/signout" do
   session[:user_id] = nil
   flash[:notice] = "You have been signed out"
   redirect "/"
+end
+
+get "/posts/new" do
+  erb :post
+end
+
+post "/posts" do
+  Post.create(body: params[:body], user_id: session[:user_id], created_at: Time.now)
+  redirect "/posts/new"
+end
+
+get "/posts" do
+  @posts = Post.all
+  erb :posts
 end

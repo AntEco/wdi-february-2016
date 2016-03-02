@@ -8,9 +8,11 @@
 <body>
   <nav>
     <a href="/">Home</a>
-    <a href="/users">Users</a>
       
     <% if session[:user_id] %> 
+      <a href="/users">Users</a>
+      <a href="/posts">Posts</a>
+      <a href="/posts/new">New Post</a>
       <a href="/signout">Signout</a>
     <% else %>
       <a href="/signup">Signup</a>
